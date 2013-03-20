@@ -16,5 +16,6 @@
 			length="38" unique="true" />
 	</class>
 -->
+	
 
 </hibernate-mapping>

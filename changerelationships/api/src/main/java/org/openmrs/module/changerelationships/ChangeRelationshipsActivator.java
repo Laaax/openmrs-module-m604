@@ -16,6 +16,8 @@ package org.openmrs.module.changerelationships;
 
 import org.apache.commons.logging.Log; 
 import org.apache.commons.logging.LogFactory;
+import org.openmrs.data.SampleData;
+import org.openmrs.log.myLogger;
 import org.openmrs.module.ModuleActivator;
 
 /**
@@ -44,6 +46,8 @@ public class ChangeRelationshipsActivator implements ModuleActivator {
 	 */
 	public void willStart() {
 		log.info("Starting Change Relationships Module");
+		//SampleData.generate();
+		//SampleData.writeAllPeopleInDBTolog();
 	}
 	
 	/**
@@ -51,6 +55,7 @@ public class ChangeRelationshipsActivator implements ModuleActivator {
 	 */
 	public void started() {
 		log.info("Change Relationships Module started");
+		
 	}
 	
 	/**
@@ -58,6 +63,7 @@ public class ChangeRelationshipsActivator implements ModuleActivator {
 	 */
 	public void willStop() {
 		log.info("Stopping Change Relationships Module");
+		
 	}
 	
 	/**
@@ -65,6 +71,9 @@ public class ChangeRelationshipsActivator implements ModuleActivator {
 	 */
 	public void stopped() {
 		log.info("Change Relationships Module stopped");
+		//SampleData.deleteAllRecordsCreatedInThisSession();
+		//myLogger.print("Printing records after deletion of records");
+		//SampleData.writeAllPeopleInDBTolog();	
 	}
 		
 }

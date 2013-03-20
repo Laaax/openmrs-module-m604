@@ -1,5 +1,5 @@
 /**
- * The contents of this file are subject to the OpenMRS Public License
+ * The contents of this file are subject to the OpenMRS Public icense
  * Version 1.0 (the "License"); you may not use this file except in
  * compliance with the License. You may obtain a copy of the License at
  * http://license.openmrs.org
@@ -13,6 +13,8 @@
  */
 package org.openmrs.module.changerelationships.api;
 
+import org.openmrs.Person;
+import org.openmrs.RelationshipType;
 import org.openmrs.api.OpenmrsService;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,6 +35,15 @@ public interface ChangeRelationshipsService extends OpenmrsService {
 	 * Add service methods here
 	 * 
 	 */
-	public int getPatientWithName(String name);
+	
+	public Person getPersonObjectFromInputname(String fromPerson);
+	
+	public RelationshipType findRelationshipTypeFromInput(String relation);
+	
+	int numberOfRelationships(Person fromPerson,RelationshipType fromPersonOldRelationshipTypeObject);
+	
+	int numberOfRelationships(Person fromPerson);
+	
+	public boolean updateRelativesToNewPerson(Person p, RelationshipType rst);
 	
 }

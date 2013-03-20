@@ -32,6 +32,12 @@
 		ChangeRelationships.hbm.xml
 				
 	</mappingFiles>
+	
+	<hibernate-configuration>
+    <session-factory>
+        <property name="show_sql">true</property>
+        </session-factory>
+	</hibernate-configuration>
 
 	<!-- Internationalization -->
 	<!-- All message codes should start with ${project.parent.artifactId}. -->
