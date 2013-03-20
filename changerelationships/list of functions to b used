@@ -1,0 +1,13 @@
+	PersonService
+	List<Person>	getPeople(String searchPhrase, Boolean dead) 
+	List<RelationshipType>	getAllRelationshipTypes(boolean includeRetired)
+	List<Relationship>	getRelationships(Person fromPerson, Person toPerson, RelationshipType relType) 
+				2 nd argument null?
+	
+	Relationship
+	 //Person	getPersonA() 
+     Person	getPersonB() 
+             
+	 
+	 
+	 

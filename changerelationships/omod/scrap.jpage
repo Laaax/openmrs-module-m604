@@ -1,0 +1,4 @@
+String[] sampleString = new String[2];
+sampleString = ("Ron").split(" ");
+for(int i =0;i<sampleString.length;i++)
+	System.out.println(sampleString[i]);

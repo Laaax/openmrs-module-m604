@@ -1,0 +1,799 @@
+Saved Person(personId=1000) to DB
+Saved Person(personId=1000) to DB
+Saved Person(personId=1000) to DB
+Saved Person(personId=1000) to DB
+People objects with names matching Testing3
+Person Testing3
+People objects with names matching Testing3
+Person Testing3
+People objects with names matching Testing3
+Person Testing3
+People objects with names matching Testing3
+Person Testing3
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+No of People found related = 0
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4
+People objects with names matching Testing4
+Person4 Testing4
+People objects with names matching Person4
+Person4 Testing4
+People objects with names matching For4
+Person4 Testing4
+Trying to find a match for Doctor/Patient
+ Match found for relationshipType selected Doctor/Patient
+Trying to find a match for Parent/Child
+ Match found for relationshipType selected Parent/Child
+Details of related People where Testing1 is related as TestRType1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+No of People found related = 3
+Details of People related to Testing1
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing2
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing3
+Person A : Testing1  TestRType1/TestRType2 Person B : Testing4
+Person A : Testing1  TestRType3/TestRType4 Person B : Testing5
+No of People found related = 4

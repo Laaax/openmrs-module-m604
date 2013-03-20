@@ -21,7 +21,7 @@ Guidelines to test the functionality of the code
 
 
 User guide.
-1)To test the code some sample data is needed. To generate these, you will have to modify the source code. If however the Database has enough records, then this is not 	necessary
+1)To test the code some sample data is needed. To generate these, you will have to modify the source code. If however the Database has enpugh records, then this is not 	necessary
 2)Navigate to openmrs-module-m604/changerelationship/api/src/main/java/org.openmrs.module.changerelationships/ChangeRelationshipModuleActivator.java
 3)Comment out the line 49 to allow the execution of SampleDate.generate()
 4)Then open the file  openmrs-module-m604/changerelationship/api/src/main/java/org.openmrs.data/SampleData.java
