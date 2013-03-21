@@ -43,16 +43,34 @@ public class  ChangeRelationshipsManageController{
 	
 	private int noOfRelations;
 	private List<RelationshipType> relationshipTypesInDB;
-	private List<Person> people;
 	private PersonService personService;
 	private String fromPerson, fromPersonRelation, toPerson, toRelationshipType;
-	private final String emptyString;
-	private boolean emptyStringError;
 	private ChangeRelationshipsService changeRelationshipService;
-	private boolean updateSuccessful;
+	private int recordUpdateStatus;
+	private boolean areAllUpdatesSuccessful;
+	private final int RECORDS_UPDATED_SUCCESFULLY, NO_RELATED_PEOPLE_ERROR, INITAL_RECORD_STATUS, OLD_PERSON_NOT_FOUND_ERROR, 
+							NEW_PERSON_NOT_FOUND_ERROR, UNABLE_TO_UPATE_ALL_RECORDS_ERROR;  
 	
 	protected final Log log = LogFactory.getLog(getClass());
 	
+		
+	public ChangeRelationshipsManageController() {
+		this.noOfRelations = 0;
+		this.fromPerson  = new String("");
+		this.fromPersonRelation = new String("");
+		this.areAllUpdatesSuccessful = false;
+		this.personService = Context.getPersonService();
+		this.changeRelationshipService = Context.getService(ChangeRelationshipsService.class);
+		this.INITAL_RECORD_STATUS = 0;
+		this.RECORDS_UPDATED_SUCCESFULLY = 1;
+		this.OLD_PERSON_NOT_FOUND_ERROR = 2;
+		this.NEW_PERSON_NOT_FOUND_ERROR  = 3;
+		this.NO_RELATED_PEOPLE_ERROR = 4;
+		this.UNABLE_TO_UPATE_ALL_RECORDS_ERROR = 5;
+		this.recordUpdateStatus = 99;
+	}
+
+
 	@ModelAttribute("patientSearch")
 	public PatientSearch getPatientSearchObject(){
 		return new PatientSearch();
@@ -64,18 +82,6 @@ public class  ChangeRelationshipsManageController{
 	}
 	
  
-	
-	public ChangeRelationshipsManageController() {
-		this.noOfRelations = 0;
-		this.fromPerson  = new String("");
-		this.fromPersonRelation = new String("");
-		this.emptyString = new String("");
-		this.emptyStringError = false;
-		this.updateSuccessful = false;
-		this.personService = Context.getPersonService();
-		this.changeRelationshipService = Context.getService(ChangeRelationshipsService.class);
-	}
-
 
 
 	@RequestMapping(value = "/module/changerelationships/manage", method = RequestMethod.GET)
@@ -84,7 +90,7 @@ public class  ChangeRelationshipsManageController{
 		relationshipTypesInDB = personService.getAllRelationshipTypes();
 		ArrayList<String> relationshipTypesString = new ArrayList<String>();
 		
-		
+		//this.noOfRelations = 0;
 		//myLogger.print("Existing relations at Controller ");
 		for(RelationshipType rt : relationshipTypesInDB)
 		{
@@ -92,16 +98,16 @@ public class  ChangeRelationshipsManageController{
 		}
 		ArrayList<String> relationshipTypesStringIncludingAll = new ArrayList<String>(relationshipTypesString);
 		relationshipTypesStringIncludingAll.add("All");	//In case all relations of a person have to be changed
-
-		ChangeRelationshipsService service = Context.getService(ChangeRelationshipsService.class);
 		
 		model.addAttribute("existingRelationshipTypesName", relationshipTypesString);
 		model.addAttribute("existingRelationshipTypesNameIncludingAll", relationshipTypesStringIncludingAll);
 		model.addAttribute("fromPerson", fromPerson);
 		model.addAttribute("fromPersonRelation", fromPersonRelation);
-		model.addAttribute("updateSuccessful", updateSuccessful);
+		
+		model.addAttribute("recordUpdateStatus", this.recordUpdateStatus);
 		model.addAttribute("noOfRelations", noOfRelations);
-		this.updateSuccessful = false;
+		this.recordUpdateStatus = this.INITAL_RECORD_STATUS;
+
 		
 	}
 	
@@ -146,7 +152,8 @@ public class  ChangeRelationshipsManageController{
 		{
 			myLogger.print("unable to find a match for given person name");//Reason could be person's 
 											//name was not entered or no one with that name exists
-			this.updateSuccessful = false;
+			this.recordUpdateStatus = this.OLD_PERSON_NOT_FOUND_ERROR;
+			this.noOfRelations = 0 ;
 		}
 		
 		return "redirect:/module/changerelationships/manage.form";
@@ -157,7 +164,7 @@ public class  ChangeRelationshipsManageController{
 	@RequestMapping(value="/module/changerelationships/updateRecord", method = RequestMethod.GET)
 	public String handleUpdateRecordRequest(ModelMap model)
 	{
-		myLogger.print("Update Record called");	
+		myLogger.print("Update Record called");
 		UpdateRecord updateRecord = new UpdateRecord();
 		 model.addAttribute("updateRecord", updateRecord);
 		 return "updateRecord";
@@ -167,32 +174,42 @@ public class  ChangeRelationshipsManageController{
 	@RequestMapping(value="/module/changerelationships/updateRecord", method = RequestMethod.POST)
 	public String updateRecord(@ModelAttribute("updateRecord")UpdateRecord updateRecord ){
 		
-		updateSuccessful = false;
 		myLogger.print("In updateRecods java code");
 		
 		toPerson = updateRecord.getToName();
 		myLogger.print("Trying to match name of new person " + toPerson);
 		Person toPersonObject = changeRelationshipService.getPersonObjectFromInputname(toPerson);
 		
-		if(toPersonObject != null)
+		if(this.noOfRelations == 0)
 		{
-			toRelationshipType = new String(updateRecord.getToRelationshipType());
-			RelationshipType toRelationshipTypeObject = changeRelationshipService.findRelationshipTypeFromInput(toRelationshipType);
-			if(toRelationshipTypeObject !=  null)
-			{
-				updateSuccessful  = this.changeRelationshipService.updateRelativesToNewPerson(toPersonObject, toRelationshipTypeObject);
-			}
-			else
-			{
-				myLogger.print("Unable to find new Relationship to which records have to be updated");
-			}
+			this.recordUpdateStatus = this.NO_RELATED_PEOPLE_ERROR;
 		}
 		else
 		{
-			myLogger.print("unable to find a match for given name");//Reason could be  no one with that name exists
-			this.updateSuccessful = false;
+			if(toPersonObject != null)
+			{
+				toRelationshipType = new String(updateRecord.getToRelationshipType());
+				RelationshipType toRelationshipTypeObject = changeRelationshipService.findRelationshipTypeFromInput(toRelationshipType);
+				if(toRelationshipTypeObject !=  null)
+					{
+						areAllUpdatesSuccessful  = this.changeRelationshipService.updateRelativesToNewPerson(toPersonObject, toRelationshipTypeObject);
+						if(areAllUpdatesSuccessful)
+							this.recordUpdateStatus = this.RECORDS_UPDATED_SUCCESFULLY;
+						else
+							this.recordUpdateStatus = this.UNABLE_TO_UPATE_ALL_RECORDS_ERROR;
+					}
+				else
+				{
+					myLogger.print("Unable to find new Relationship to which records have to be updated");
+				}
+			}
+			else
+			{
+				myLogger.print("unable to find a match for given name");//Reason could be  no one with that name exists
+				this.recordUpdateStatus = this.NEW_PERSON_NOT_FOUND_ERROR;
+			}
+			
 		}
-		
 		return "redirect:/module/changerelationships/manage.form";
 	}
 

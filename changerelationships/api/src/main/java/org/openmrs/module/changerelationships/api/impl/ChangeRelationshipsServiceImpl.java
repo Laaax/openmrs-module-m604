@@ -159,6 +159,10 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
 		personService = Context.getPersonService();
       	for(Relationship relationship : allRelatedPeople)
       	{
+      			if(toPerson.equals(relationship.getPersonB()))	//if new person is same as the person on the other side 
+       			{												//	of the relationship, it would result in a relationship
+      				continue;									//as Person1 related to Person1, so avoid by skipping. Boundary case.
+      			}
       			relationship.setPersonA(toPerson);
       			relationship.setRelationshipType(toRelationshipType);
       			try
@@ -174,6 +178,7 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
       			}
       	
     	}
+      	myLogger.print("Printing records after update ");
       	checkIfRecordsUpdated();
     	return true;
 	}
@@ -184,7 +189,7 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
 		
 		for(Relationship r : allRelatedPeople)
 		{
-			myLogger.print(r.getPersonB().getFamilyName() + " relationshiptype changed to " 
+			myLogger.print(r.getPersonB().getFamilyName() + " relationshiptype " 
 								+ r.getRelationshipType().getaIsToB() + "/" + r.getRelationshipType().getbIsToA());
 		}
 		

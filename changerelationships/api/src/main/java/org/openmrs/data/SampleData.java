@@ -1,6 +1,6 @@
 package org.openmrs.data;
 
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.Date;   
 import java.util.List;
 
@@ -8,10 +8,8 @@ import org.openmrs.Person;
 import org.openmrs.PersonName;
 import org.openmrs.Relationship;
 import org.openmrs.RelationshipType;
-import org.openmrs.api.APIException;
 import org.openmrs.api.PersonService;
 import org.openmrs.api.context.Context;
-import org.openmrs.api.db.PersonDAO;
 import org.openmrs.log.myLogger;
 
 
@@ -20,42 +18,21 @@ public class SampleData {
 	
 	private static PersonService service;  
 	private static ArrayList<Person> people;
-	private static ArrayList<PersonName> peopleName;
 	private static ArrayList<Relationship> newRelations;
-	private static ArrayList<RelationshipType> newRelationshipTypes;
+	
 	
 	public static void generate()
 	{
 		myLogger.print("Generating sample data...");
 		people = new ArrayList<Person>();
-		peopleName = new ArrayList<PersonName>();
 		service = Context.getPersonService();
 		newRelations = new ArrayList<Relationship>();
 		createPersons();
 		introduceRelationships();
-		createNewRelationShipTypes();
+	
 	}
 	
 	
-	private static void createNewRelationShipTypes() {
-		
-		newRelationshipTypes = new ArrayList();
-		newRelationshipTypes.add(createNewRelationType("R1", "R2"));
-		writeAllRelationTypesInDBTolog();
-	}
-
-
-	private static RelationshipType createNewRelationType(String string, String string2) {
-		
-		RelationshipType tempType = new RelationshipType();
-		String desc = new String(string + string2);
-		tempType.setDescription(desc);
-		tempType.setaIsToB(string);
-		tempType.setbIsToA(string2);
-		service.saveRelationshipType(tempType);
-		return tempType;
-	}
-
 
 	private static void introduceRelationships() {
 		
@@ -86,12 +63,45 @@ public class SampleData {
 		newRelations.add(new Relationship(people.get(0), people.get(4), parent));
 		newRelations.add(new Relationship(people.get(0), people.get(5), auntUncle));
 		
-		for(Relationship rs: newRelations)
+		saveAllRelationshipsToDB();
+		writeAllrelationshipsInDBToLog();
+	}
+
+
+	/*create some N new person objects*/
+	public static void createPersons()
+	{
+		/*Format for create person createPerson(FirstName, MiddleName, LastName, DOByy, DOBmm, DOBdd)*/
+		people.add(createPerson("Brittney", "Keel", "Bellow", "Female", 1909, 12, 12));
+		people.add(createPerson("Eric", "KS " , "Lane"  , "Female" ,1997 ,11, 8 ));
+		people.add(createPerson("Daphen", "Well" , "Moone"  ,"Female" ,1987 ,03 , 12));
+		people.add(createPerson("Fraser", "Martin" , "Crane"  ,"Male" ,1987 ,03 , 12));
+		people.add(createPerson("Katie", "Miliband" , "Black"  ,"Female" ,1987 ,03 , 12));
+		people.add(createPerson("Peter", "L" , "Lowesnky"  ,"Male" ,1987 ,03 , 12));
+		
+		
+		saveAllPeopletoDB();
+		//writeAllPeopleInDBTolog();	
+	}
+	
+			/*for debugging*/
+	public static void writeAllPeopleInDBTolog() {
+		
+		List<Person> newPersons;
+		Person p;
+		for(int i=0;i<people.size();i++)
 		{
-			service.saveRelationship(rs);
+			p = people.get(i);
+						myLogger.print("Searching in DB for person with name " + p.getFamilyName());
+			newPersons = service.getPeople(p.getFamilyName(), null);
+			for(Person p2 : newPersons)
+				myLogger.print("Person with ID " + p2.getPersonId() + " name  " + p2.getFamilyName()+"  in DB");
 		}
 		
-		
+	}
+
+	public static void writeAllrelationshipsInDBToLog()
+	{
 		List<Relationship> existingRelationships = service.getAllRelationships();
 		myLogger.print("Existing relations");
 		for(Relationship rs : existingRelationships)
@@ -99,41 +109,7 @@ public class SampleData {
 			myLogger.print( rs.getRelationshipId()+ " " + rs.getPersonA().getFamilyName() + "  " +
 							rs.getPersonB().getFamilyName() );
 		}
-		
-		
-		
 	}
-
-
-	/*create some N new person objects*/
-	public static void createPersons()
-	{
-		people.add(createPerson("Beaty", "Charles", "Model", "Male", 1909, 12, 12));
-		people.add(createPerson("Tori", "KS " , "Brown"  , "Female" ,1997 ,11, 8 ));
-		people.add(createPerson("Sam", "Will" , "Axe"  ,"Male" ,1987 ,03 , 12));
-		people.add(createPerson("Roger", "Will" , "Bilwalk"  ,"Male" ,1987 ,03 , 12));
-		people.add(createPerson("Karen", "Will" , "Mcd"  ,"Female" ,1987 ,03 , 12));
-		people.add(createPerson("Pearson", "For" , "Pearson"  ,"Male" ,1987 ,03 , 12));
-		
-		
-		saveAllPeopletoDB();
-		writeAllPeopleInDBTolog();	
-	}
-	
-			/*for debugging*/
-	public static void writeAllPeopleInDBTolog() {
-		
-		List<Person> newPersons;
-		for(Person p : people)
-		{
-			newPersons = service.getPeople(p.getFamilyName(), null);
-			for(Person p2 : newPersons)
-				myLogger.print("New person with ID " + p2.getPersonId() + " name  " + p2.getFamilyName() +
-						" familyName2 : "+ p2		+ "  inserted to DB");
-		}
-		
-	}
-
 	
 	/*for debugging*/
 	public static void writeAllRelationTypesInDBTolog() {
@@ -150,49 +126,43 @@ public class SampleData {
 
 	private static void saveAllPeopletoDB() {
 		
-		try
-		{
+		
 		for(Person p : people)
-			service.savePerson(p);
+		{
+			try
+			{
+			service.savePerson(p);			
 		}catch(Exception ae)
 			{
-				myLogger.print("Unable to save a person to DB");
+				myLogger.print("Unable to save " + p.getFamilyName() +" to Database");
+				myLogger.print(ae.getStackTrace().toString());
 			}
+		}
 	}
 
+	private static void saveAllRelationshipsToDB()
+	{
 
+		for(Relationship rs: newRelations)
+		{
+			service.saveRelationship(rs);
+		}
+		
+	}
+	
+	
 	public static Person createPerson(String givenName, String middleName, String familyName, String gender,
 			 int birthDateyy, int birthDatemm, int birthDatedd) 
 				{
 					
 					Person tempPersonObj = new Person();
+					/*Id generated automatically for the person*/
 					PersonName tempPersonNameObj = new PersonName(givenName, middleName, familyName);
-					tempPersonNameObj.setFamilyName2(familyName);
-					
-					//tempPersonObj.setPersonId(new Integer(id));
+					tempPersonNameObj.setFamilyName(familyName);
 					tempPersonObj.setGender(gender);
 					tempPersonObj.addName(tempPersonNameObj);
+										//myLogger.print(tempPersonObj.getFamilyName() + " , " + tempPersonObj.getGivenName());
 					tempPersonObj.setBirthdate(new Date(birthDateyy, birthDatemm, birthDatedd));
-					/*try{
-					 service.savePerson(tempPersonObj);
-					
-					}catch(Exception ae)
-					{
-					
-						myLogger.print("Unable to save person record to DB");
-						//ae.printStackTrace();
-						
-					}
-					
-					people = service.getPeople(familyName, null);
-					for(Person p : people)
-						myLogger.print("New person with ID " + p.getPersonId() + " name  " + p.getFamilyName()
-								+ "  inserted to DB");
-					
-					/*
-					service.savePerson(tempPersonObj);
-					//myLogger.print("New person " + tempPersonObj.getFamilyName() + " created");*/
-					
 					
 					return tempPersonObj;
 					
@@ -200,9 +170,18 @@ public class SampleData {
 		
 		public static void deleteAllRecordsCreatedInThisSession()
 		{
+			service = Context.getPersonService();
 			myLogger.print("Deleting all records");
+			for(Relationship rs : newRelations)
+				service.purgeRelationship(rs);
+			newRelations.clear();
 			for(Person p : people)
+			{
+				myLogger.print("deleting record of  " + p.getFamilyName());
 				service.purgePerson(p);
+			}
+			people.clear();
+			
 		}
 	
 

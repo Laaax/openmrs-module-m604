@@ -66,10 +66,33 @@
 
 
 
-<c:if test="${updateSuccessful == true}">
-<p> Records updated successfully </p>
-</c:if>
 
+<%
+final int INITAL_RECORD_STATUS = 0, RECORDS_UPDATED_SUCCESFULLY = 1, OLD_PERSON_NOT_FOUND_ERROR = 2,
+     NEW_PERSON_NOT_FOUND_ERROR  = 3, NO_RELATED_PEOPLE_ERROR = 4, UNABLE_TO_UPATE_ALL_RECORDS_ERROR = 5;
+	
+	int updateStatus = Integer.parseInt(request.getAttribute("recordUpdateStatus").toString());
+			//out.print("Update Status : " + updateStatus );
+			
+	switch(updateStatus)
+	{
+	case  INITAL_RECORD_STATUS : break; 
+	
+	case	RECORDS_UPDATED_SUCCESFULLY : out.print("All Records updated successfully");
+			break;
+	case	OLD_PERSON_NOT_FOUND_ERROR : out.print("No record found for person whose relation has to be changed");
+			break;
+	case	NEW_PERSON_NOT_FOUND_ERROR :  out.print("No record found for new person to who relation has to be changed");
+			break;
+	case	NO_RELATED_PEOPLE_ERROR : out.print("No person related to person whose relationship has to be changed");
+			break;
+	case	UNABLE_TO_UPATE_ALL_RECORDS_ERROR : out.print("Unable to update all records. Some were updated though"+
+															"See logs for more details");
+			break;
+																	
+	default : break;
+	}
+%>
 
 
 <%@ include file="/WEB-INF/template/footer.jsp"%>
