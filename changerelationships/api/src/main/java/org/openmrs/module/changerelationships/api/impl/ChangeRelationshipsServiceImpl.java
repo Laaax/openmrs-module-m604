@@ -109,6 +109,7 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
 	personService = Context.getPersonService();
 	
 	allRelatedPeople = personService.getRelationships(fromPerson, null, fromPersonRelationship);
+	
 	myLogger.print("Details of related People where " + fromPerson.getFamilyName() + " is related as " + 
 									fromPersonRelationship.getaIsToB() );
 	for(Relationship r : allRelatedPeople)
@@ -116,13 +117,6 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
 		myLogger.print("Person A : "  + r.getPersonA().getFamilyName() + "  "+ r.getRelationshipType().getaIsToB()+ 
 					"/" + r.getRelationshipType().getbIsToA() + " Person B : " + r.getPersonB().getFamilyName() );
 		}
-	
-	/*List<Relationship> allRelatedPeople = personService.getAllRelationships();
-	for(Relationship r : allRelatedPeople)
-	{
-	myLogger.print("Person A : "  + r.getPersonA().getFamilyName() + "  " + r.getRelationshipType().getaIsToB()+ 
-							 "/" + r.getRelationshipType().getbIsToA() + " Person B : " + r.getPersonB().getFamilyName()   );
-	}*/
 	
 	noOfRelatedPeople = allRelatedPeople.size();
 	myLogger.print("No of People found related = " + noOfRelatedPeople);
@@ -137,13 +131,7 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
 		personService = Context.getPersonService();
 		
 		allRelatedPeople = personService.getRelationships(fromPerson, null, null);
-		myLogger.print("Details of People related to " + fromPerson.getFamilyName() );
-		for(Relationship r : allRelatedPeople)
-			{
-			myLogger.print("Person A : "  + r.getPersonA().getFamilyName() + "  "+ r.getRelationshipType().getaIsToB()+ 
-						"/" + r.getRelationshipType().getbIsToA() + " Person B : " + r.getPersonB().getFamilyName() );
-			}
-		
+		printAllRelatedPeopleDetails();
 		noOfRelatedPeople = allRelatedPeople.size();
 		myLogger.print("No of People found related = " + noOfRelatedPeople);
 		return noOfRelatedPeople;
@@ -185,13 +173,13 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
       	
     	}
       	myLogger.print("Printing records after update ");
-      	checkIfRecordsUpdated();
+      	printAllRelatedPeopleDetails();
     	return areAllUpdatesSuccessful;
 	}
 
 	
 	
-	private void checkIfRecordsUpdated() {
+	private void printAllRelatedPeopleDetails() {
 		
 		for(Relationship r : allRelatedPeople)
 		{
