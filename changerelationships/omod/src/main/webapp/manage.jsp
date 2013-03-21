@@ -86,7 +86,7 @@ final int INITAL_RECORD_STATUS = 0, RECORDS_UPDATED_SUCCESFULLY = 1, OLD_PERSON_
 			break;
 	case	NO_RELATED_PEOPLE_ERROR : out.print("No person related to person whose relationship has to be changed");
 			break;
-	case	UNABLE_TO_UPATE_ALL_RECORDS_ERROR : out.print("Unable to update all records. Some were updated though"+
+	case	UNABLE_TO_UPATE_ALL_RECORDS_ERROR : out.print("Unable to update all records. Some were updated though."+
 															"See logs for more details");
 			break;
 																	

@@ -157,11 +157,17 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
 	public boolean updateRelativesToNewPerson(Person toPerson, RelationshipType toRelationshipType)
 	{
 		personService = Context.getPersonService();
+		boolean areAllUpdatesSuccessful = true;
       	for(Relationship relationship : allRelatedPeople)
       	{
       			if(toPerson.equals(relationship.getPersonB()))	//if new person is same as the person on the other side 
        			{												//	of the relationship, it would result in a relationship
-      				continue;									//as Person1 related to Person1, so avoid by skipping. Boundary case.
+      				areAllUpdatesSuccessful = false;				//as Person1 related to Person1, so avoid by skipping. Boundary case.
+      				myLogger.print("Unable to update record for " + toPerson + " " +
+      						"as it would result in the same person being on either side of the relationship. " +
+      						"In this case " + toPerson.getFamilyName() + "related as " + relationship.getRelationshipType().getaIsToB()
+      						+ " to" + relationship.getPersonB().getFamilyName());
+      				continue;
       			}
       			relationship.setPersonA(toPerson);
       			relationship.setRelationshipType(toRelationshipType);
@@ -180,7 +186,7 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
     	}
       	myLogger.print("Printing records after update ");
       	checkIfRecordsUpdated();
-    	return true;
+    	return areAllUpdatesSuccessful;
 	}
 
 	
