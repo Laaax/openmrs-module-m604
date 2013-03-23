@@ -125,7 +125,12 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
 
 
 
-/*Function matches all the people related to fromPerson in any way*/
+	public List<Relationship> getAllRelatedPeople() {
+		return allRelatedPeople;
+	}
+
+
+	/*Function matches all the people related to fromPerson in any way*/
 	@Override
 	public int numberOfRelationships(Person fromPerson) {
 		personService = Context.getPersonService();

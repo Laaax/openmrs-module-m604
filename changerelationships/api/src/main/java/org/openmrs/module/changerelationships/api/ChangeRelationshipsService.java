@@ -13,7 +13,10 @@
  */
 package org.openmrs.module.changerelationships.api;
 
+import java.util.List;
+
 import org.openmrs.Person;
+import org.openmrs.Relationship;
 import org.openmrs.RelationshipType;
 import org.openmrs.api.OpenmrsService;
 import org.springframework.transaction.annotation.Transactional;
@@ -45,5 +48,7 @@ public interface ChangeRelationshipsService extends OpenmrsService {
 	int numberOfRelationships(Person fromPerson);
 	
 	public boolean updateRelativesToNewPerson(Person p, RelationshipType rst);
+	
+	public List<Relationship> getAllRelatedPeople();
 	
 }
