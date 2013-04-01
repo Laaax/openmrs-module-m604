@@ -1,14 +1,14 @@
 package org.openmrs.module.changerelationships;
 
-import org.openmrs.RelationshipType;
 
-public class UpdateRecord {
+public class UpdateRecordForm {
 
-	String  toRelationshipType, toName;
+	private String toRelationshipType;
+	private String toName;
 
-	public UpdateRecord() {
-		this.toName = new String();
-		this.toRelationshipType = new String();
+	public UpdateRecordForm() {
+		this.toName = "";
+		this.toRelationshipType = "";
 	}
 
 	public String getToRelationshipType() {

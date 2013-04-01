@@ -7,45 +7,48 @@
 <p>Hello ${user.systemId}!</p>
 
 <h2>Information</h2>
-<form modelAttribute="patientSearch" method="POST" action="patientSearch.form" >
+<table>
+	<tr>
+	<form modelAttribute="patientSearchForm" method="POST" action="patientSearch.form" >
    
-    
+    	<table>
+    	<td>
         <label path="fromName">Change Person from</label>
         <input path="fromName" name = "fromName" value = "${fromPerson}" required/>
-        &nbsp&nbsp&nbsp
-  	 	<label path="fromRelationshipType">Relationship Type</label>
-  	 	<select path="fromRelationshipType" name = "fromRelationshipType">
-          <c:forEach var = "relationshiptype"  items = "${existingRelationshipTypesNameIncludingAll}" >
-        	 
-        	<option value = "${relationshiptype}">  ${relationshiptype}   	</option>
-        </c:forEach> 
+        </td>
         
-    	<select>
-    	
-    	&nbsp &nbsp 
-
+        <td>
+  	 		<label path="fromRelationshipType">Relationship Type</label>
+  	 		<select path="fromRelationshipType" name = "fromRelationshipType">
+          	<c:forEach var = "relationshiptype"  items = "${existingRelationshipTypesNameIncludingAll}" >
+        	 
+        		<option value = "${relationshiptype}">  ${relationshiptype}   	</option>
+        	
+           	</c:forEach> 
+    		</select>  
+    	</td>  	
+    	 
+	    <td>
     	<input type="submit" value="Search"/>
-    
-    <br/>
-    <br/>	
-    <br/>
-    <br/>	
+    	</td>
+    	
+    	</table>
+    </form>     
+	</tr>
 	
+	<tr>
+    	<p> The Search criteria for ${fromPerson} as a ${fromPersonRelation} has ${noOfRelations} relations </p> 
+    </tr>
     
-    <p> The Search criteria for &nbsp${fromPerson}&nbsp as a &nbsp ${fromPersonRelation} &nbsp  has ${noOfRelations} relations </p> 
-       
-</form>
+    <tr>
+    <form modelAttribute="updateRecordForm" method="POST" action="updateRecord.form">
+    	<table>
+    	<td>
+    		<label path="toName">Change Person to</label>
+        	<input path="toName" name = "toName" required/>
+        </td>
 
-    <br/>
-    <br/>	
-    <br/>
-    <br/>	
-	
-
-<form modelAttribute="updateRecord"  method="POST" action="updateRecord.form">
-	<label path="toName">Change Person to</label>
-        <input path="toName" name = "toName" required/>
-        &nbsp&nbsp&nbsp
+		<td>
   	 	<label path="toRelationshipType">New Relationship Type</label>
   	 	<select path="toRelationshipType" name = "toRelationshipType">
           <c:forEach var = "relationshiptype"  items = "${existingRelationshipTypesName}" >
@@ -53,19 +56,18 @@
         	<option value = "${relationshiptype}">  ${relationshiptype}   	</option>
         </c:forEach> 
         
-    	<select>
+    	</select>
+    	</td>
     	
-    	&nbsp &nbsp 
-
-    	<input type="submit" value="Change"/>
-	</select>
-	</form>
-
-    <br/>
-    <br/>	
-
-
-
+    	<td>
+    		<input type="submit" value="Change"/>
+    	</td>
+    	</table>
+    
+    </form>	
+    </tr>
+    
+  </table>
 
 <%
 final int INITAL_RECORD_STATUS = 0, RECORDS_UPDATED_SUCCESFULLY = 1, OLD_PERSON_NOT_FOUND_ERROR = 2,
