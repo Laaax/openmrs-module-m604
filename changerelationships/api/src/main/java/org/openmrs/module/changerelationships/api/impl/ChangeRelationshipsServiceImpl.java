@@ -36,13 +36,13 @@ public class ChangeRelationshipsServiceImpl extends BaseOpenmrsService implement
 	
 	protected final Log log = LogFactory.getLog(this.getClass());
 	
-	private PersonService personService;
+	//private PersonService personService;
 	
 	private ChangeRelationshipsDAO dao;
-	private List<Person> people;
-	private List<Relationship> allRelatedPeople;
-	private List<RelationshipType> existingRelationshipTypes;
-	private int noOfRelatedPeople;
+	//private List<Person> people;
+	//private List<Relationship> allRelatedPeople;
+	//private List<RelationshipType> existingRelationshipTypes;
+	//private int noOfRelatedPeople;
 	
 	/**
      * @param dao the dao to set
@@ -63,8 +63,8 @@ public class ChangeRelationshipsServiceImpl extends BaseOpenmrsService implement
     /*Matches the input string to an existing person object and returns the first person*/
 	public Person getPersonObjectFromInputname(String fromPerson) {
     	
-    	personService = Context.getPersonService();
-		people = personService.getPeople(fromPerson, null);
+    	PersonService personService = Context.getPersonService();
+		List<Person> people = personService.getPeople(fromPerson, null);
 		
 		if(people.isEmpty())
 			return null;
@@ -82,10 +82,10 @@ public class ChangeRelationshipsServiceImpl extends BaseOpenmrsService implement
 	/*Matches the input string to an existing relationship type*/
 	public RelationshipType findRelationshipTypeFromInput(String relation) {
     	
-    	personService = Context.getPersonService();
+    	PersonService personService = Context.getPersonService();
 		myLogger.print("Trying to find a match for " + relation);
 		RelationshipType fromRelationshipTypeSelected = null;
-		existingRelationshipTypes = personService.getAllRelationshipTypes();
+		List<RelationshipType> existingRelationshipTypes = personService.getAllRelationshipTypes();
 		for(RelationshipType rt : existingRelationshipTypes)
 		{
 			if( (rt.getaIsToB() + "/" + rt.getbIsToA()).equals(relation) )
@@ -104,11 +104,11 @@ public class ChangeRelationshipsServiceImpl extends BaseOpenmrsService implement
 
 /*Function returns the number of people who are related to fromPerson as a fromPersonRelationshiptype */
 @Override
-public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonRelationship) {
+public List<Relationship> numberOfRelationships(Person fromPerson, RelationshipType fromPersonRelationship) {
 	
-	personService = Context.getPersonService();
+	PersonService personService = Context.getPersonService();
 	
-	allRelatedPeople = personService.getRelationships(fromPerson, null, fromPersonRelationship);
+    List<Relationship> allRelatedPeople = personService.getRelationships(fromPerson, null, fromPersonRelationship);
 	
 	myLogger.print("Details of related People where " + fromPerson.getFamilyName() + " is related as " + 
 									fromPersonRelationship.getaIsToB() );
@@ -118,28 +118,28 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
 					"/" + r.getRelationshipType().getbIsToA() + " Person B : " + r.getPersonB().getFamilyName() );
 		}
 	
-	noOfRelatedPeople = allRelatedPeople.size();
-	myLogger.print("No of People found related = " + noOfRelatedPeople);
-	return noOfRelatedPeople;
+	//int noOfRelatedPeople = allRelatedPeople.size();*/
+	//myLogger.print("No of People found related = " + noOfRelatedPeople);
+	return allRelatedPeople;
 }
 
 
 
-	public List<Relationship> getAllRelatedPeople() {
-		return allRelatedPeople;
-	}
+	//public List<Relationship> getAllRelatedPeople() {
+		//return allRelatedPeople;
+	//}
 
 
 	/*Function matches all the people related to fromPerson in any way*/
 	@Override
-	public int numberOfRelationships(Person fromPerson) {
-		personService = Context.getPersonService();
+	public List<Relationship> numberOfRelationships(Person fromPerson) {
+		PersonService personService = Context.getPersonService();
 		
-		allRelatedPeople = personService.getRelationships(fromPerson, null, null);
-		printAllRelatedPeopleDetails();
-		noOfRelatedPeople = allRelatedPeople.size();
-		myLogger.print("No of People found related = " + noOfRelatedPeople);
-		return noOfRelatedPeople;
+	    List<Relationship> allRelatedPeople = personService.getRelationships(fromPerson, null, null);
+		//printAllRelatedPeopleDetails(allRelatedPeople);
+		//int noOfRelatedPeople = allRelatedPeople.size();
+		//myLogger.print("No of People found related = " + noOfRelatedPeople);
+		return allRelatedPeople;
 
 	}
 
@@ -147,9 +147,9 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
 	/*Updates relations of all relatives of old person to new toRelationshipType of toPerson*/
 	/*If unable to update the records of any of the relatives, the failure message is logged and the rest of the 
 	  records are updated*/
-	public boolean updateRelativesToNewPerson(Person toPerson, RelationshipType toRelationshipType)
+	public boolean updateRelativesToNewPerson(Person toPerson, RelationshipType toRelationshipType, List<Relationship> allRelatedPeople)
 	{
-		personService = Context.getPersonService();
+		PersonService personService = Context.getPersonService();
 		boolean areAllUpdatesSuccessful = true;
       	for(Relationship relationship : allRelatedPeople)
       	{
@@ -178,13 +178,13 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
       	
     	}
       	myLogger.print("Printing records after update ");
-      	printAllRelatedPeopleDetails();
+      	printAllRelatedPeopleDetails(allRelatedPeople);
     	return areAllUpdatesSuccessful;
 	}
 
 	
 	
-	private void printAllRelatedPeopleDetails() {
+	private void printAllRelatedPeopleDetails(List<Relationship> allRelatedPeople) {
 		
 		for(Relationship r : allRelatedPeople)
 		{
@@ -193,6 +193,5 @@ public int numberOfRelationships(Person fromPerson, RelationshipType fromPersonR
 		}
 		
 	}
-	
 	
 }

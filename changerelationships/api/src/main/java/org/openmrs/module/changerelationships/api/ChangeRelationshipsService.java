@@ -43,12 +43,12 @@ public interface ChangeRelationshipsService extends OpenmrsService {
 	
 	public RelationshipType findRelationshipTypeFromInput(String relation);
 	
-	int numberOfRelationships(Person fromPerson,RelationshipType fromPersonOldRelationshipTypeObject);
+	List<Relationship> numberOfRelationships(Person fromPerson,RelationshipType fromPersonOldRelationshipTypeObject);
 	
-	int numberOfRelationships(Person fromPerson);
+	List<Relationship> numberOfRelationships(Person fromPerson);
 	
-	public boolean updateRelativesToNewPerson(Person p, RelationshipType rst);
+	public boolean updateRelativesToNewPerson(Person toPerson, RelationshipType toRelationshipType, List<Relationship> allRelatedPeople);
 	
-	public List<Relationship> getAllRelatedPeople();
+	//public List<Relationship> getAllRelatedPeople();
 	
 }

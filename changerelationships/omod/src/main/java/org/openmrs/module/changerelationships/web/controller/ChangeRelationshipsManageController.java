@@ -19,6 +19,7 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openmrs.Person;
+import org.openmrs.Relationship;
 import org.openmrs.RelationshipType;
 import org.openmrs.api.context.Context;
 import org.openmrs.log.myLogger;
@@ -113,13 +114,18 @@ public class  ChangeRelationshipsManageController{
 			return "redirect:/module/changerelationships/manage.form";
 		}
 				 
-		//in case all relations of a person have to be changed call 
-		if(searchForm.getFromRelationshipType().equals("All")){		
-			formData.setNumberOfRelationshipsFound(crService.numberOfRelationships(fromPersonObject));	
+		//in case all relations of a person have to be changed call
+		List<Relationship> allRelatedPeople;
+		if(searchForm.getFromRelationshipType().equals("All")){	
+			allRelatedPeople = crService.numberOfRelationships(fromPersonObject);
+			formData.setAllRelatedPeople(allRelatedPeople);
+			formData.setNumberOfRelationshipsFound(allRelatedPeople.size());
 		} else {
+		    
 			RelationshipType fromPersonOldRelationshipTypeObject = crService.findRelationshipTypeFromInput(searchForm.getFromRelationshipType());
-				
-			formData.setNumberOfRelationshipsFound(crService.numberOfRelationships(fromPersonObject, fromPersonOldRelationshipTypeObject));
+			allRelatedPeople = crService.numberOfRelationships(fromPersonObject, fromPersonOldRelationshipTypeObject);	
+			formData.setAllRelatedPeople(allRelatedPeople);
+			formData.setNumberOfRelationshipsFound(allRelatedPeople.size());
 		}
 		
 		return "redirect:/module/changerelationships/manage.form";
@@ -147,7 +153,7 @@ public class  ChangeRelationshipsManageController{
 				//toRelationshipType = new String(updateRecord.getToRelationshipType());
 				RelationshipType toRelationshipTypeObject = crService.findRelationshipTypeFromInput(updateRecord.getToRelationshipType());
 				if (toRelationshipTypeObject != null) {
-					boolean areAllUpdatesSuccessful = crService.updateRelativesToNewPerson(toPersonObject,toRelationshipTypeObject);
+					boolean areAllUpdatesSuccessful = crService.updateRelativesToNewPerson(toPersonObject,toRelationshipTypeObject, formData.getAllRelatedPeople());
 					
 					if (areAllUpdatesSuccessful)
 						formData.setRecordUpdateStatus(RecordUpdateStatus.RECORDS_UPDATED_SUCCESFULLY);

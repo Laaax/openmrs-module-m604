@@ -213,27 +213,27 @@ public class  ChangeRelationshipsServiceTest extends BaseModuleContextSensitiveT
 		deleteDataCreatedForTests();
 	}
 
-	@Test
-	public void updateRelativesToNewPersonTest()
-	{
-		setup();
-		createTestPeopleAndRelations();
-		/*First person has 1 relative for relationshipType 1, the following function also sets the list of 
-		 * people who are related to Person at testPeople[0]*/
-		this.testCangeRelationshipService.numberOfRelationships(testPeople.get(0), testRelationshipTypes.get(1));
-		/*Must be able to update */
-		boolean  updateSuccessful = this.testCangeRelationshipService.updateRelativesToNewPerson
-										(testPeople.get(2), testRelationshipTypes.get(0));
-		assertTrue(updateSuccessful);
-		
-		this.testCangeRelationshipService.numberOfRelationships(testPeople.get(0));
-		updateSuccessful = this.testCangeRelationshipService.updateRelativesToNewPerson(testPeople.get(2), 
-											testRelationshipTypes.get(0));
-		/*This should fail because testPeople[2](who is the new person/toPerson) is one of the people already 
-		 * related to testPeople[0]. While all the records will be updated, the record for person testPeople[2]
-		 * will not*/
-		assertFalse(updateSuccessful);
-		deleteDataCreatedForTests();
-	}
+//	//@Test
+//	//public void updateRelativesToNewPersonTest()
+//	//{
+//		//setup();
+//		//createTestPeopleAndRelations();
+//		/*First person has 1 relative for relationshipType 1, the following function also sets the list of 
+//		 * people who are related to Person at testPeople[0]*/
+//		this.testCangeRelationshipService.numberOfRelationships(testPeople.get(0), testRelationshipTypes.get(1));
+//		/*Must be able to update */
+//		boolean  updateSuccessful = this.testCangeRelationshipService.updateRelativesToNewPerson
+//										(testPeople.get(2), testRelationshipTypes.get(0));
+//		assertTrue(updateSuccessful);
+//		
+//		this.testCangeRelationshipService.numberOfRelationships(testPeople.get(0));
+//		updateSuccessful = this.testCangeRelationshipService.updateRelativesToNewPerson(testPeople.get(2), 
+//											testRelationshipTypes.get(0));
+//		/*This should fail because testPeople[2](who is the new person/toPerson) is one of the people already 
+//		 * related to testPeople[0]. While all the records will be updated, the record for person testPeople[2]
+//		 * will not*/
+//		assertFalse(updateSuccessful);
+//		deleteDataCreatedForTests();
+//	}
 	
 }
