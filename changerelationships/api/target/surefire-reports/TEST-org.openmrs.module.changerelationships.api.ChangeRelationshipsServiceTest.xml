@@ -1,68 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="11.627" errors="0" skipped="0" tests="7" name="org.openmrs.module.changerelationships.api.ChangeRelationshipsServiceTest">
+<testsuite skipped="0" tests="4" failures="0" errors="0" name="org.openmrs.module.changerelationships.api.ChangeRelationshipsServiceTest" time="22.262">
   <properties>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-6-openjdk-i386/jre/lib/i386"/>
-    <property name="java.vm.version" value="20.0-b12"/>
-    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
-    <property name="java.vendor.url" value="http://java.sun.com/"/>
-    <property name="path.separator" value=":"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="java.vm.name" value="OpenJDK Server VM"/>
-    <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="user.country" value="US"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.os.patch.level" value="unknown"/>
-    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/ashray/git/openmrs-module-m604/changerelationships"/>
-    <property name="java.runtime.version" value="1.6.0_27-b27"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-6-openjdk-i386/jre/lib/endorsed"/>
-    <property name="os.arch" value="i386"/>
-    <property name="java.io.tmpdir" value="/tmp"/>
-    <property name="line.separator" value="
-"/>
-    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
-    <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/ashray/junoworkspace/.metadata/.plugins/org.eclipse.m2e.core/launches/m2conf8861420172566069335.tmp"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/usr/lib/jvm/java-6-openjdk-i386/jre/lib/i386/server:/usr/lib/jvm/java-6-openjdk-i386/jre/lib/i386:/usr/lib/jvm/java-6-openjdk-i386/jre/../lib/i386:/usr/lib/jvm/java-7-oracle/jre/lib/i386/client:/usr/lib/jvm/java-7-oracle/jre/lib/i386::/usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.class.version" value="50.0"/>
-    <property name="sun.management.compiler" value="HotSpot Tiered Compilers"/>
-    <property name="os.version" value="3.2.0-38-generic-pae"/>
-    <property name="user.home" value="/home/ashray"/>
-    <property name="user.timezone" value="America/New_York"/>
-    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="java.specification.version" value="1.6"/>
-    <property name="user.name" value="ashray"/>
-    <property name="java.class.path" value="/home/ashray/eclipse/eclipse/configuration/org.eclipse.osgi/bundles/604/1/.cp/jars/plexus-classworlds-2.4.jar"/>
-    <property name="java.vm.specification.version" value="1.0"/>
-    <property name="sun.arch.data.model" value="32"/>
-    <property name="java.home" value="/usr/lib/jvm/java-6-openjdk-i386/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B package"/>
-    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
-    <property name="user.language" value="en"/>
-    <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.6.0_27"/>
-    <property name="java.ext.dirs" value="/usr/lib/jvm/java-6-openjdk-i386/jre/lib/ext:/usr/java/packages/lib/ext"/>
-    <property name="securerandom.source" value="file:/dev/./urandom"/>
-    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-6-openjdk-i386/jre/lib/resources.jar:/usr/lib/jvm/java-6-openjdk-i386/jre/lib/rt.jar:/usr/lib/jvm/java-6-openjdk-i386/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-6-openjdk-i386/jre/lib/jsse.jar:/usr/lib/jvm/java-6-openjdk-i386/jre/lib/jce.jar:/usr/lib/jvm/java-6-openjdk-i386/jre/lib/charsets.jar:/usr/lib/jvm/java-6-openjdk-i386/jre/lib/netx.jar:/usr/lib/jvm/java-6-openjdk-i386/jre/lib/plugin.jar:/usr/lib/jvm/java-6-openjdk-i386/jre/lib/rhino.jar:/usr/lib/jvm/java-6-openjdk-i386/jre/lib/modules/jdk.boot.jar:/usr/lib/jvm/java-6-openjdk-i386/jre/classes"/>
-    <property name="java.vendor" value="Sun Microsystems Inc."/>
-    <property name="maven.home" value="/home/ashray/git/openmrs-module-m604/changerelationships/EMBEDDED"/>
-    <property name="file.separator" value="/"/>
-    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
-    <property name="sun.cpu.endian" value="little"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.desktop" value="gnome"/>
-    <property name="sun.cpu.isalist" value=""/>
+    <property value="IBM Corporation" name="java.vendor"/>
+    <property value="SUN_STANDARD" name="sun.java.launcher"/>
+    <property value="Windows 7" name="os.name"/>
+    <property value="C:\Program Files\IBM\Java60\jre\bin\default\jclSC160\vm.jar;C:\Program Files\IBM\Java60\jre\lib\annotation.jar;C:\Program Files\IBM\Java60\jre\lib\beans.jar;C:\Program Files\IBM\Java60\jre\lib\java.util.jar;C:\Program Files\IBM\Java60\jre\lib\jndi.jar;C:\Program Files\IBM\Java60\jre\lib\logging.jar;C:\Program Files\IBM\Java60\jre\lib\security.jar;C:\Program Files\IBM\Java60\jre\lib\sql.jar;C:\Program Files\IBM\Java60\jre\lib\ibmorb.jar;C:\Program Files\IBM\Java60\jre\lib\ibmorbapi.jar;C:\Program Files\IBM\Java60\jre\lib\ibmcfw.jar;C:\Program Files\IBM\Java60\jre\lib\rt.jar;C:\Program Files\IBM\Java60\jre\lib\charsets.jar;C:\Program Files\IBM\Java60\jre\lib\resources.jar;C:\Program Files\IBM\Java60\jre\lib\ibmpkcs.jar;C:\Program Files\IBM\Java60\jre\lib\ibmcertpathfw.jar;C:\Program Files\IBM\Java60\jre\lib\ibmjgssfw.jar;C:\Program Files\IBM\Java60\jre\lib\ibmjssefw.jar;C:\Program Files\IBM\Java60\jre\lib\ibmsaslfw.jar;C:\Program Files\IBM\Java60\jre\lib\ibmjcefw.jar;C:\Program Files\IBM\Java60\jre\lib\ibmjgssprovider.jar;C:\Program Files\IBM\Java60\jre\lib\ibmjsseprovider2.jar;C:\Program Files\IBM\Java60\jre\lib\ibmcertpathprovider.jar;C:\Program Files\IBM\Java60\jre\lib\ibmxmlcrypto.jar;C:\Program Files\IBM\Java60\jre\lib\management-agent.jar;C:\Program Files\IBM\Java60\jre\lib\xml.jar;C:\Program Files\IBM\Java60\jre\lib\jlm.jar;C:\Program Files\IBM\Java60\jre\lib\javascript.jar" name="sun.boot.class.path"/>
+    <property value="" name="sun.java2d.fontpath"/>
+    <property value="Sun Microsystems Inc." name="java.vm.specification.vendor"/>
+    <property value="jvmwa6460sr9-20101124_69295" name="java.runtime.version"/>
+    <property value="ykolesn" name="user.name"/>
+    <property value="j9jit24" name="java.compiler"/>
+    <property value="UTF8" name="os.encoding"/>
+    <property value="true" name="guice.disable.misplaced.annotation.check"/>
+    <property value="" name="com.ibm.util.extralibs.properties"/>
+    <property value="" name="com.ibm.jcl.checkClassPath"/>
+    <property value="en" name="user.language"/>
+    <property value="C:\Program Files\IBM\Java60\jre\bin\default;C:\Program Files\IBM\Java60\jre\bin" name="com.ibm.oti.vm.bootstrap.library.path"/>
+    <property value="C:\Program Files\IBM\Java60\jre\bin\default;C:\Program Files\IBM\Java60\jre\bin" name="sun.boot.library.path"/>
+    <property value="C:\tempWorkspace\.metadata\.plugins\org.eclipse.m2e.core\launches\m2conf6284405483927527026.tmp" name="classworlds.conf"/>
+    <property value="1.6.0" name="java.version"/>
+    <property value="America/New_York" name="user.timezone"/>
+    <property value="64" name="sun.arch.data.model"/>
+    <property value="C:\Program Files\IBM\Java60\jre\lib\endorsed" name="java.endorsed.dirs"/>
+    <property value="24" name="com.ibm.oti.vm.library.version"/>
+    <property value="Cp1252" name="sun.jnu.encoding"/>
+    <property value="15" name="jxe.current.romimage.version"/>
+    <property value="\" name="file.separator"/>
+    <property value="Java Platform API Specification" name="java.specification.name"/>
+    <property value="50.0" name="java.class.version"/>
+    <property value="US" name="user.country"/>
+    <property value="C:\Program Files\IBM\Java60\jre" name="java.home"/>
+    <property value="JRE 1.6.0 IBM J9 2.4 Windows 7 amd64-64 jvmwa6460sr9-20101124_69295 (JIT enabled, AOT enabled)
+J9VM - 20101124_069295
+JIT  - r9_20101028_17488ifx2
+GC   - 20101027_AA" name="java.vm.info"/>
+    <property value="6.1 build 7601 Service Pack 1" name="os.version"/>
+    <property value="" name="java.awt.fonts"/>
+    <property value=";" name="path.separator"/>
+    <property value="2.4" name="java.vm.version"/>
+    <property value="java.util.prefs.WindowsPreferencesFactory" name="java.util.prefs.PreferencesFactory"/>
+    <property value="" name="user.variant"/>
+    <property value="sun.awt.windows.WPrinterJob" name="java.awt.printerjob"/>
+    <property value="UnicodeLittle" name="sun.io.unicode.encoding"/>
+    <property value="sun.awt.windows.WToolkit" name="awt.toolkit"/>
+    <property value="true" name="ibm.signalhandling.sigint"/>
+    <property value="ON" name="java.assistive"/>
+    <property value="C:\Users\IBM_ADMIN" name="user.home"/>
+    <property value="little" name="com.ibm.cpu.endian"/>
+    <property value="Sun Microsystems Inc." name="java.specification.vendor"/>
+    <property value="true" name="ibm.signalhandling.sigchain"/>
+    <property value="C:\Program Files\IBM\Java60\jre\bin\default;C:\Program Files\IBM\Java60\jre\bin;.;C:\windows\system32;C:\windows;C:\windows\system32\wbem;C:\windows\system32\windowspowershell\v1.0\;c:\program files\ibm\infoprint select;c:\program files\thinkpad\bluetooth software\;c:\program files\thinkpad\bluetooth software\syswow64;c:\program files (x86)\ibm\personal communications\;c:\program files (x86)\ibm\trace facility\;c:\program files\intel\wifi\bin\;c:\program files\common files\intel\wirelesscommon\;c:\program files (x86)\lenovo\access connections\;C:\apache-ant-1.8.2\bin;C:\apache-maven-2.2.1\bin;C:\sdk\bin;c:\program files\ibm\gsk8\lib64;c:\program files (x86)\ibm\gsk8\lib;C:\PROGRA~1\IBM\SQLLIB\BIN;C:\PROGRA~1\IBM\SQLLIB\FUNCTION;C:\PROGRA~1\IBM\SQLLIB\SAMPLES\REPL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\" name="java.library.path"/>
+    <property value="http://www.ibm.com/" name="java.vendor.url"/>
+    <property value="IBM Corporation" name="java.vm.vendor"/>
+    <property value="JRE 1.6.0 IBM J9 2.4 Windows 7 amd64-64 jvmwa6460sr9-20101124_69295 (JIT enabled, AOT enabled)
+J9VM - 20101124_069295
+JIT  - r9_20101028_17488ifx2
+GC   - 20101027_AA" name="java.fullversion"/>
+    <property value="C:\Users\IBM_ADMIN\git\openmrs-module-m604\changerelationships\EMBEDDED" name="maven.home"/>
+    <property value="Java(TM) SE Runtime Environment" name="java.runtime.name"/>
+    <property value="org.codehaus.plexus.classworlds.launcher.Launcher -B package" name="sun.java.command"/>
+    <property value="/C:/tempEclipse/eclipse/configuration/org.eclipse.osgi/bundles/779/1/.cp/jars/plexus-classworlds-2.4.jar" name="java.class.path"/>
+    <property value="Java Virtual Machine Specification" name="java.vm.specification.name"/>
+    <property value="1.0" name="java.vm.specification.version"/>
+    <property value="C:\Users\IBM_AD~1\AppData\Local\Temp\" name="java.io.tmpdir"/>
+    <property value="20110211_02" name="java.jcl.version"/>
+    <property value="Cp1252" name="ibm.system.encoding"/>
+    <property value="amd64" name="os.arch"/>
+    <property value="sun.awt.Win32GraphicsEnvironment" name="java.awt.graphicsenv"/>
+    <property value="false" name="ibm.signalhandling.rs"/>
+    <property value="C:\Program Files\IBM\Java60\jre\lib\ext" name="java.ext.dirs"/>
+    <property value="C:\Users\IBM_ADMIN\git\openmrs-module-m604\changerelationships" name="user.dir"/>
+    <property value="
+" name="line.separator"/>
+    <property value="IBM J9 VM" name="java.vm.name"/>
+    <property value="false" name="com.ibm.oti.shared.enabled"/>
+    <property value="64" name="com.ibm.vm.bitmode"/>
+    <property value="15" name="jxe.lowest.romimage.version"/>
+    <property value="Cp1252" name="file.encoding"/>
+    <property value="20101103_1225" name="com.ibm.oti.jcl.build"/>
+    <property value="1.6" name="java.specification.version"/>
+    <property value="scar" name="com.ibm.oti.configuration"/>
   </properties>
-  <testcase time="9.588" classname="org.openmrs.module.changerelationships.api.ChangeRelationshipsServiceTest" name="shouldSetupContext"/>
-  <testcase time="0.342" classname="org.openmrs.module.changerelationships.api.ChangeRelationshipsServiceTest" name="shouldSetupPersonService"/>
-  <testcase time="0.33" classname="org.openmrs.module.changerelationships.api.ChangeRelationshipsServiceTest" name="getPersonObjectFromInputnameTest"/>
-  <testcase time="0.185" classname="org.openmrs.module.changerelationships.api.ChangeRelationshipsServiceTest" name="findRelationshipTypeFromInputTest"/>
-  <testcase time="0.22" classname="org.openmrs.module.changerelationships.api.ChangeRelationshipsServiceTest" name="numberOfRelationshipGivenPersonAndRelationshipTypeTest"/>
-  <testcase time="0.185" classname="org.openmrs.module.changerelationships.api.ChangeRelationshipsServiceTest" name="numberOfRelationshipsWhenAllSelected"/>
-  <testcase time="0.196" classname="org.openmrs.module.changerelationships.api.ChangeRelationshipsServiceTest" name="updateRelativesToNewPersonTest"/>
+  <testcase classname="org.openmrs.module.changerelationships.api.ChangeRelationshipsServiceTest" name="shouldSetupContext" time="17.529"/>
+  <testcase classname="org.openmrs.module.changerelationships.api.ChangeRelationshipsServiceTest" name="shouldSetupPersonService" time="1.591"/>
+  <testcase classname="org.openmrs.module.changerelationships.api.ChangeRelationshipsServiceTest" name="getPersonObjectFromInputnameTest" time="1.656"/>
+  <testcase classname="org.openmrs.module.changerelationships.api.ChangeRelationshipsServiceTest" name="findRelationshipTypeFromInputTest" time="0.833"/>
 </testsuite>
